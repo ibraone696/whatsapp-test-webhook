@@ -24,7 +24,7 @@ app.get('/webhook', (req, res) => {
 });
 
 // Réception des messages WhatsApp
-app.post('/webhook', (req, res) => {
+app.post('https://n8n-tc9w.onrender.com/webhook/whatsapp', (req, res) => {
   const body = req.body;
 
   if (body.object) {
@@ -47,3 +47,4 @@ app.post('/webhook', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Serveur WhatsApp actif sur le port ${PORT}`);
 });
+
